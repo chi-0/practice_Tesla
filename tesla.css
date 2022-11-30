@@ -1,0 +1,424 @@
+:root {
+  --black-color: #171a20;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.nav_left {
+  padding-left: 32px;
+}
+
+.nav_left .logo {
+  color: var(--black-color);
+  padding: 0 16px;
+}
+
+.nav_left .logo .tds-icon {
+  height: 24px;
+  width: 120px
+}
+
+.nav_center {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 8px;
+  z-index: 10;
+}
+
+.nav_center a {
+  color: var(--black-color);
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav_center a span {
+  margin: 0 8px;
+}
+
+.nav_right {
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 32px;
+  margin: 0;
+}
+
+.nav_right a {
+  color: var(--black-color);
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav_right a span {
+  margin: 0 8px;
+}
+
+.nav_center_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0,0,0,.05);
+  transition: all 0.5s ease-out;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop {
+    display: none;
+  }
+
+  .nav_left {
+    padding-left: 20px;
+  }
+
+  .nav_right {
+    padding-right: 20px;
+  }
+
+  .nav_right .nav_btn {
+    width: 60px;
+    height: 32px;
+    line-height: 32px;
+    background-color: rgba(0,0,0,.05);
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .nav_left {
+    padding-left: 8px;
+  }
+
+  .nav_right {
+    padding-right: 8px;
+  }
+}
+
+/* 사이드바 */
+.sidebar {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 311px;
+  height: 745.6px;
+  background-color: white;
+  z-index: 9999;
+}
+
+.sidebar .x_mark {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+  height: 40px;
+  align-items: center;
+}
+
+.sidebar .x_mark i {
+  font-size: 23px;
+  color: rgb(57, 60, 65);
+}
+
+.sidebar .sidebar_menu {
+  padding: 4px 32px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  width: 247px;
+  height: 576px;
+  justify-content: space-around;
+}
+
+.sidebar .sidebar_menu a {
+  font-size: 14px;
+  padding: 4px 8px;
+  color: #393c41;
+}
+
+.side {
+  display: flex;
+  animation: menu_slide_in 0.5s ease-out forwards;
+}
+
+.slide_out {
+  animation: menu_slide_out 0.5s ease-out forwards;
+}
+
+.effect {
+  display: none;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  inset: 0;
+}
+
+.hide {
+  display: block;
+  animation: bg_hide 0.5s ease-out forwards;
+}
+
+.look {
+  animation: bg_display 0.5s ease-out forwards;
+}
+
+@keyframes menu_slide_in {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes menu_slide_out {
+  from {
+    right: 0px;
+    opacity: 1;
+  }
+  to {
+    right: -200px;
+    opacity: 0;
+  }
+}
+
+@keyframes bg_hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bg_display {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 섹션 */
+.sec {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section1 {
+  background-image: url("./tesla_img/t1.jpg");
+}
+
+.section2 {
+  background-image: url("./tesla_img/t2.jpg");
+}
+
+.section3 {
+  background-image: url("./tesla_img/t3.jpg");
+}
+
+.section4 {
+  background-image: url("./tesla_img/t4.jpg");
+}
+
+.section5 {
+  background-image: url("./tesla_img/t5.jpg");
+}
+
+.sec .content {
+  width: 100%;
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sec .content h1 {
+  color: var(--black-color);
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0 24px 0 24px;
+}
+
+.sec .content .h1_last {
+  font-size: 34px;
+}
+
+.sec .content p {
+  font-size: 14px;
+  margin: 0;
+  padding: 6px 24px 14px 24px;
+}
+
+.sec .content p a {
+  color: var(--black-color);
+  box-shadow: 0 1px 0 0 var(--black-color);
+}
+
+.sec .content .buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 52vh;
+}
+
+.sec .content .buttons_bottom {
+  padding-top: 46vh;
+}
+
+.sec .content .buttons a {
+  color: var(--black-color);
+  font-size: 14px;
+  width: 264px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.sec .content .buttons .order {
+  margin-right: 25px;
+  background-color: rgba(23, 26, 32, 0.8);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.sec .content .buttons .order_last {
+  margin: 0px;
+}
+
+.sec .content .buttons .view {
+  background-color: rgba(244, 244, 244, 0.65);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .sec .content .buttons {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 47vh;
+  }
+
+  .sec .content .buttons a {
+    width: 435.2px;
+  }
+
+  .sec .content .buttons .order {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .sec .content .buttons a {
+    width: 312px;
+  }
+}
+
+/* 풋터 */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer_top {
+  height: 70px;
+  line-height: 70px;
+}
+
+footer .footer_top a {
+  color: #d0d1d2;
+  font-size: 12px;
+}
+
+footer .footer_top a:not(:last-child) {
+  margin-right: 14px;
+}
+
+footer .footer_bottom {
+  width: 566px;
+  text-align: center;
+}
+
+footer .footer_bottom span {
+  color: #eee;
+  font-size: 10px;
+  padding-bottom: 14px;
+}
+
+.footer_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .footer_pc {
+    display: none;
+  }
+
+  .footer_mobile {
+    display: flex;
+    background-color: #000;
+    height: 174px;
+    justify-content: flex-start;
+    padding-top: 8px;
+  }
+
+  footer .footer_top {
+    height: 28px;
+    line-height: 28px;
+  }
+
+  footer .footer_top a:not(:last-child) {
+    margin-right: 0px;
+  }
+
+  footer .footer_bottom {
+    width: 435px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  footer .footer_top {
+    width: 327px;
+  }
+
+  footer .footer_bottom {
+    width: 327px;
+  }
+}
