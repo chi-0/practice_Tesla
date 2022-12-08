@@ -268,18 +268,19 @@ header {
   background-image: url("./tesla_img/t5.jpg");
 }
 
-.sec .content {
+.content {
   width: 100%;
-  padding-top: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   opacity: 1;
   z-index: 1;
+  position: fixed;
+  top: 15vh;
 }
 
-.sec .content h1 {
+.content h1 {
   color: var(--black-color);
   font-size: 40px;
   font-weight: 500;
@@ -287,33 +288,33 @@ header {
   padding: 0 24px 0 24px;
 }
 
-.sec .content .h1_last {
+.content .h1_last {
   font-size: 34px;
 }
 
-.sec .content p {
+.content p {  
   font-size: 14px;
   margin: 0;
   padding: 6px 24px 14px 24px;
 }
 
-.sec .content p a {
+.content p a {
   color: var(--black-color);
   box-shadow: 0 1px 0 0 var(--black-color);
 }
 
-.sec .content .buttons {
+.content .buttons {
   display: flex;
   width: 100%;
   justify-content: center;
   padding-top: 52vh;
 }
 
-.sec .content .buttons_bottom {
+.content .buttons_bottom {
   padding-top: 46vh;
 }
 
-.sec .content .buttons a {
+.content .buttons a {
   color: var(--black-color);
   font-size: 14px;
   width: 264px;
@@ -321,41 +322,41 @@ header {
   line-height: 40px;
 }
 
-.sec .content .buttons .order {
+.content .buttons .order {
   margin-right: 25px;
   background-color: rgba(23, 26, 32, 0.8);
   color: #fff;
   border-radius: 4px;
 }
 
-.sec .content .buttons .order_last {
+.content .buttons .order_last {
   margin: 0px;
 }
 
-.sec .content .buttons .view {
+.content .buttons .view {
   background-color: rgba(244, 244, 244, 0.65);
   border-radius: 4px;
 }
 
 @media screen and (max-width: 600px) {
-  .sec .content .buttons {
+  .content .buttons {
     flex-direction: column;
     align-items: center;
     padding-top: 47vh;
   }
 
-  .sec .content .buttons a {
+  .content .buttons a {
     width: 435.2px;
   }
 
-  .sec .content .buttons .order {
+  .content .buttons .order {
     margin-right: 0;
     margin-bottom: 15px;
   }
 }
 
 @media screen and (max-width: 499px) {
-  .sec .content .buttons a {
+  .content .buttons a {
     width: 312px;
   }
 }

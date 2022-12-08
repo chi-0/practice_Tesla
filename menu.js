@@ -17,17 +17,3 @@ xBtn.addEventListener('click', () => {
   setTimeout(() => {sidebar.classList.remove('side')}, 600);
   setTimeout(() => {effect.classList.remove('hide')}, 600);
 })
-
-/** 헤더 메뉴 */
-const navCenterBg = document.querySelector('.nav_center_bg');
-const navCenterMenu = document.querySelectorAll('.nav_center a');
-
-navCenterMenu.forEach(
-  menu => menu.addEventListener('mouseenter',(e) => {
-    navCenterBg.style.left = e.currentTarget.offsetLeft + "px";
-    navCenterBg.style.top = e.currentTarget.offsetTop + "px";
-    navCenterBg.style.width = e.currentTarget.offsetWidth + "px";
-    navCenterBg.style.height = e.currentTarget.offsetHeight + "px";
-    navCenterBg.style.backgroundColor = "rgba(0,0,0,0.05)";
-  })
-)
