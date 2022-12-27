@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/youtube.html"
+  status = 200
